@@ -6,7 +6,7 @@ The User Web Interface of ProVide FTP Server (formerly zFTP) for Windows up to v
 
 Affected by this vulnerability are multiple endpoints of the Web Admin Interface, and multiple parameters. The CWE definition for the vulnerability is CWE-79. As an impact it is known to affect integrity. An attacker might be able to inject arbitrary html and script code into the user accessible web site. This would alter the appearance and would make it possible to initiate further attacks against site visitors.
 
-For further details, refer to the singles vulnerabilities.
+For further details, refer to the single vulnerabilities.
 
 * [Collaborate - Reflected](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Collaborate%20-%20Reflected%20Cross-Site%20Scripting)
 * [Collaborate - Stored](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Collaborate%20-%20Stored%20Cross-Site%20Scripting)
