@@ -1,4 +1,4 @@
-# Web Admin Interface - Multiple Cross-Site-Scripting
+# Web User Interface - Multiple Cross-Site-Scripting
 
 ## Summary
 
