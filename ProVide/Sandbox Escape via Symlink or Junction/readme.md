@@ -44,7 +44,7 @@ sftp>
 
 ## Remediation
 
-No remediation currently exists for the.
+No official fix currently exists for this vulnerability.
 
 ## References
 
