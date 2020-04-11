@@ -8,12 +8,12 @@ Affected by this vulnerability are multiple endpoints of the Web Admin Interface
 
 For further details, refer to the singles vulnerabilities.
 
-* [Collaborate - Reflected](./Collaborate - Reflected Cross-Site Scripting)
-* [Collaborate - Stored](./Collaborate - Stored Cross-Site Scripting)
-* [Deletemultiple - Reflected](./Deletemultiple - Reflected Cross-Site Scripting)
-* [Share - Reflected](./Share - Reflected Cross-Site Scripting)
-* [Share - Stored](./Share - Stored Cross-Site Scripting)
-* [Waitedit - Reflected](./Waitedit - Reflected Cross-Site Scripting)
+* [Collaborate - Reflected](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Collaborate%20-%20Reflected%20Cross-Site%20Scripting)
+* [Collaborate - Stored](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Collaborate%20-%20Stored%20Cross-Site%20Scripting)
+* [Deletemultiple - Reflected](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Deletemultiple%20-%20Reflected%20Cross-Site%20Scripting)
+* [Share - Reflected](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Share%20-%20Reflected%20Cross-Site%20Scripting)
+* [Share - Stored](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Share%20-%20Stored%20Cross-Site%20Scripting)
+* [Waitedit - Reflected](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20User%20Interface%20-%20Multiple%20Cross-Site-Scripting/Waitedit%20-%20Reflected%20Cross-Site%20Scripting)
 
 ## Remediation
 

@@ -8,9 +8,9 @@ Affected by this vulnerability are multiple endpoints of the Web Admin Interface
 
 For further details, refer to the singles vulnerabilities.
 
-* [SetUserInfo](./GetInheritedProperties - Reflected Cross-Site Scripting)
-* [GetUserInfo](./GetUserInfo - Reflected Cross-Site Scripting)
-* [GetInheritedProperties](./SetUserInfo - Stored Cross-Site Scripting)
+* [SetUserInfo](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20Admin%20Interface%20-%20Multiple%20Cross-Site-Scripting/GetInheritedProperties%20-%20Reflected%20Cross-Site%20Scripting)
+* [GetUserInfo](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20Admin%20Interface%20-%20Multiple%20Cross-Site-Scripting/GetUserInfo%20-%20Reflected%20Cross-Site%20Scripting)
+* [GetInheritedProperties](https://github.com/belong2yourself/vulnerabilities/tree/master/ProVide/Web%20Admin%20Interface%20-%20Multiple%20Cross-Site-Scripting/SetUserInfo%20-%20Stored%20Cross-Site%20Scripting)
 
 ## Remediation
 
