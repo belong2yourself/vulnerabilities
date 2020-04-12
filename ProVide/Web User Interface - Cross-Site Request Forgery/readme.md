@@ -4,7 +4,7 @@
 
 A vulnerability has been found in the User Web Interface of ProVide FTP Server (formerly zFTP) for Windows up to v13.1. It has been rated as problematic. Affected by this issue is an unknown code. The manipulation with an unknown input leads to a cross site request forgery vulnerability. Using CWE to declare the problem leads to CWE-352. Impacted is integrity. An attacker might be able force legitimate users to initiate unwanted actions within the web application.
 
-The weakness was presented 04/08/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-XXXX. The attack may be launched remotely. No form of authentication is required for exploitation. Technical details are known and a proof-of-concept exploit is publicly available.
+The weakness was presented 04/08/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-11701. The attack may be launched remotely. No form of authentication is required for exploitation. Technical details are known and a proof-of-concept exploit is publicly available.
 
 ## Proof-of-Concept
 

@@ -10,7 +10,7 @@ The applicatio doesn't adequately check the certificate filename during the impo
 
 A vulnerability has been found in the Admin Web Interface of ProVide FTP Server (formerly zFTP) for Windows up to v13.1. It has been declared as critical. Affected by this vulnerability is an unknown part of the file /ajax/ImportCertificate. The manipulation of the parameter **fileName** with `../` and `%00` leads to a path traversal vulnerability. The CWE definition for the vulnerability is CWE-23. As an impact it is known to affect integrity and availability. An attacker might be able to overwrite arbitrary files on the filesystem, corrupting them.
 
-The weakness was disclosed 05/06/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). It is possible to read the advisory at github.com. This vulnerability is known as CVE-2020-XXXX. The attack can be launched remotely. A single authentication is needed for exploitation. Technical details of the vulnerability are known, and a public exploit has been released to the public.
+The weakness was disclosed 05/06/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). It is possible to read the advisory at github.com. This vulnerability is known as CVE-2020-11705. The attack can be launched remotely. A single authentication is needed for exploitation. Technical details of the vulnerability are known, and a public exploit has been released to the public.
 
 ## Proof-of-Concept
 

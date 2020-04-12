@@ -8,7 +8,7 @@ It was identified that ProVide FTP Server (formerly zFTP) for Windows, is instal
 
 A vulnerability has been found in ProVide FTP Server (formerly zFTP) for Windows up to 13.1 and classified as critical. This vulnerability affects some unknown functionality. The manipulation with an unknown input leads to a privilege escalation vulnerability. The CWE definition for the vulnerability is CWE-428. As an impact it is known to affect confidentiality, integrity, and availability.
 
-The weakness was shared 04/08/2020 by deadc0de (GitHub Repository). This vulnerability was named CVE-2020-XXXX since XX/XX/XXXX. The attack needs to be approached locally. A single authentication is needed for exploitation. Technical details are known but there is no exploit publicly available.  
+The weakness was shared 04/08/2020 by deadc0de (GitHub Repository). The attack needs to be approached locally. A single authentication is needed for exploitation. Technical details are known but there is no exploit publicly available.  
 
 ## Proof-of-Concept
 
