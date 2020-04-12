@@ -1,4 +1,4 @@
-# Web Admin Interface - Cross-Site-Request-Forgery (CSRF)
+# Admin/User Login - Session Fixation
 
 ## VulDB-Like Summary
 
