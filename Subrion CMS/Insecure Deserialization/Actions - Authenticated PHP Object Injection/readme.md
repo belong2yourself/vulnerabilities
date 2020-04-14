@@ -6,7 +6,7 @@ This vulnerability was found almost contemporaneously by both me and MS509 Team.
 
 A vulnerability has been found in the Subrion CMS up to v4.2.1. It has been rated as problematic. Affected by this issue is the file `/actions.php`. The manipulation of the of the **biography** value within a user profile leads to a PHP Object Injection vulnerability. Using CWE to declare the problem leads to CWE-502. Impacted is Integrity and Availability. An attacker might be able inject arbitrary PHP objects within the application context, and use them to achive arbitrary file deletion.
 
-The weakness was originally presented by MS509 on 03/05/2020. A public exploit was released on 02/29/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory (english) is shared for download at github.com. This vulnerability is not handled as a CVE currently. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
+The weakness was originally presented by MS509 on 03/05/2020. A public exploit was released on 04/14/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory (english) is shared for download at github.com. This vulnerability is not handled as a CVE currently. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
 
 ## Proof-of-Concept
 

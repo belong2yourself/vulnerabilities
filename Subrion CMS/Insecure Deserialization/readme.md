@@ -10,8 +10,8 @@ A vulnerability has been found in the Subrion CMS up to v4.2.2, which allows cod
 
 In particular, the first two instances showed to be exploitable, leading to arbitrary file deletion.
 
-* []()
-* []()
+* ~~[Actions](https://github.com/belong2yourself/vulnerabilities/tree/master/Subrion%20CMS/Insecure%20Deserialization/Actions%20-%20Authenticated%20PHP%20Object%20Injection)~~ Fixed in Latest Branch
+* [Subpages](https://github.com/belong2yourself/vulnerabilities/tree/master/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection)
 
 **Note:** The vulnerability affecting `/front/actions.php`, is the result of a parallel research by MS509 and myself. However, as they firstly notified the issue to Intelliants, kudos to them!
 
