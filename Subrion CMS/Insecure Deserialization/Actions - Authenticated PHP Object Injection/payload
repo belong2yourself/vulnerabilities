@@ -1,0 +1,1 @@
+O:24:"Smarty_Internal_Template":2:{s:6:"cached";O:22:"Smarty_Template_Cached":3:{s:7:"lock_id";s:31:"/var/www/html/subrion/.htaccess";s:9:"is_locked";b:1;s:7:"handler";O:34:"Smarty_Internal_CacheResource_File":0:{}}s:6:"smarty";O:6:"Smarty":4:{s:13:"cache_locking";i:1;s:9:"cache_dir";s:1:"/";s:12:"use_sub_dirs";b:1;s:5:"cache";b:1;}}
