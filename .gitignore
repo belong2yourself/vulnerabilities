@@ -2,3 +2,4 @@ Reports/*
 *.docx
 *.pdf
 .idea
+**/ignore
