@@ -19,7 +19,7 @@ For further information, please refer to the single vulnerabilities.
 
 ## Remediation
 
-Currently, no fixes are available for this issue.
+Currently, no fixes are available for the issue affecting **blocks.php**, while the one affecting **actions.php** seems to be fixed in the latest branch.
 
 ## References
 
