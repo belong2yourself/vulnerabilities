@@ -16,8 +16,8 @@ The exploitable URLs were found to be:
 
 All the instances showed to be exploitable, leading to arbitrary code execution.
 
-* [PhotoGallery](https://github.com/belong2yourself/vulnerabilities/tree/master/MonoX%20CMS/Remote%20Code%20Execution%20via%20Insecure%20Deserialization/Actions%20-%20Authenticated%20PHP%20Object%20Injection)
-* [HTML5Upload](https://github.com/belong2yourself/vulnerabilities/tree/master/MonoX%20CMS/Remote%20Code%20Execution%20via%20Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection)
+* [PhotoGallery](https://github.com/belong2yourself/vulnerabilities/tree/master/MonoX%20CMS/Remote%20Code%20Execution%20via%20Insecure%20Deserialization/Photogallery%20-%20Remote%20Code%20Execution%20via%20Insecure%20Deserialization)
+* [HTML5Upload](https://github.com/belong2yourself/vulnerabilities/tree/master/MonoX%20CMS/Remote%20Code%20Execution%20via%20Insecure%20Deserialization/HTML5Upload%20-%20Remote%20Code%20Execution%20via%20Insecure%20Deserialization)
 
 For further information, please refer to the single vulnerabilities.
 
