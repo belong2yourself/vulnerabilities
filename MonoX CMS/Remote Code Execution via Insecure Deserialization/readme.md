@@ -1,4 +1,4 @@
-# Arbitrary File Deletion via Insecure Deserialization
+# Remote Code Execution via Insecure Deserialization
 
 ## Summary
 
