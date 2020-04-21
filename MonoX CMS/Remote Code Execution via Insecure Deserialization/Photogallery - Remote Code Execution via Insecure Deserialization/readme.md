@@ -1,4 +1,4 @@
-# Photogallery - Remote Code Execution
+# Photogallery - Remote Code Execution via Insecure Deserialization
 
 ## VulDB-Like Summary
 

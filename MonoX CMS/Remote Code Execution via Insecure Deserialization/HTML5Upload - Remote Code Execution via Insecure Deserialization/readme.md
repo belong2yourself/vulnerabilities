@@ -1,4 +1,4 @@
-# HTML5Upload and SilverLightUploadHandler - Remote Code Execution
+# HTML5Upload and SilverLightUploadHandler - Remote Code Execution via Insecure Deserialization
 
 ## VulDB-Like Summary
 
