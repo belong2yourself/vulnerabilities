@@ -6,7 +6,7 @@ The application allows admin to modify ASPX templates for the entire site. This 
 
 Affected is the file `MonoX.MonoSoftware.MonoX.Admin.PageManagerPageTemplates`, as it allows to upload an arbitrary ASPX template via the `ctlUpload_radUploadfile0` parameter. The manipulation of a page template leads to remote command execution on the underlying server. CWE is classifying the issue as CWE-553. This is going to have an impact on confidentiality, integrity, and availability.
 
-The weakness was discovered during April 2020 and it is uniquely identified as CVE-2020-XXXX. The exploitability is told to be trivial. It is possible to launch the attack remotely. A single authentication is necessary for exploitation. Technical details are known, but no public exploit has been released to the public.
+The weakness was discovered during April 2020 and it is uniquely identified as CVE-2020-12470. The exploitability is told to be trivial. It is possible to launch the attack remotely. A single authentication is necessary for exploitation. Technical details are known, but no public exploit has been released to the public.
 
 ## Proof-of-Concept
 

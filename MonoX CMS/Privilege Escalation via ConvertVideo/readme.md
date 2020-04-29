@@ -6,7 +6,7 @@ The application allows to host videos and audio files within news and blog posts
 
 Affected are the files `MonoX.MonoSoftware.MonoX.Video.FlvEncoder` and `MonoX.MonoSoftware.MonoX.Video.Mp4Encoder`, as they do not check the validity of `ffmpeg.exe` file before executing it. The manipulation of the `ffmpeg.exe` executable leads to remote command execution on the underlying server. CWE is classifying the issue as CWE-269. This is going to have an impact on confidentiality, integrity, and availability.
 
-The weakness was discovered during April 2020 and it is uniquely identified as CVE-2020-XXXX. The exploitability is told to be trivial. It is possible to launch the attack remotely. A single authentication is necessary for exploitation. Technical details are known, but no public exploit has been released to the public.
+The weakness was discovered during April 2020 and it is uniquely identified as CVE-2020-12473. The exploitability is told to be trivial. It is possible to launch the attack remotely. A single authentication is necessary for exploitation. Technical details are known, but no public exploit has been released to the public.
 
 ## Proof-of-Concept
 

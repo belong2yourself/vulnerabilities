@@ -3,3 +3,4 @@ Reports/*
 *.pdf
 .idea
 **/ignore
+**/readme.html

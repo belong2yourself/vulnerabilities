@@ -1055,14 +1055,14 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>readme</title></head><body><article class="markdown-body"><h1 id="photogallery-remote-code-execution">Photogallery - Remote Code Execution<a class="headerlink" href="#photogallery-remote-code-execution" title="Permanent link"></a></h1>
+</style><title>readme</title></head><body><article class="markdown-body"><h1 id="photogallery-remote-code-execution-via-insecure-deserialization">Photogallery - Remote Code Execution via Insecure Deserialization<a class="headerlink" href="#photogallery-remote-code-execution-via-insecure-deserialization" title="Permanent link"></a></h1>
 <h2 id="vuldb-like-summary">VulDB-Like Summary<a class="headerlink" href="#vuldb-like-summary" title="Permanent link"></a></h2>
 <p>A vulnerability has been found in the MonoX CMS for .NET up to v5.1.40.5152. It has been rated as critical. Affected by this issue are the classes <code>MonoX.MonoSoftware.MonoX.HTML5Upload</code> and <code>MonoX.MonoSoftware.MonoX.SilverLightUploadModule</code>. The manipulation of the of the <strong>ctl00$ctl00$ctl01$ctl00$cp$cp$wpm$gwpsnPhotoGallery$snPhotoGallery$photoUpload$ctlUpload$handlerResponse</strong> parameter leads to Remote Code Execution vulnerability. Using CWE to declare the problem leads to CWE-502. Impacted is Integrity and Availability. An attacker might be able execute arbitrary code within the application context, and use them to achive remote code execution within the underlying hosting server.</p>
 <p>The weakness was presented 04/19/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-XXXX. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.</p>
 <h2 id="proof-of-concept">Proof-of-Concept<a class="headerlink" href="#proof-of-concept" title="Permanent link"></a></h2>
 <p>An exploit script is provided in this repository, which may be used to easily verify and exploit the vulnerability.</p>
 <p>The script should give the following output, proving the vulnerability.</p>
-<div class="codehilite"><pre>$ python3 exploit.py -t http://monox.local -u admin -p Passw0rd! -c calc
+<div class="codehilite"><pre>$ python3 exploit.py -t http://monox.local -u admin -p Passw0rd! -c calc -y path/to/ysoserial.exe
 [*] Logging in
 [*] Triggering RCE
 [+] Success!

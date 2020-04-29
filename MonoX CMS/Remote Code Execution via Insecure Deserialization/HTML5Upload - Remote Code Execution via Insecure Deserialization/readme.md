@@ -4,7 +4,7 @@
 
 A vulnerability has been found in the MonoX CMS for .NET up to v5.1.40.5152. It has been rated as critical. Affected by this issue are the classes `MonoX.MonoSoftware.MonoX.HTML5Upload` and `MonoX.MonoSoftware.MonoX.SilverLightUploadHandler`. The combined manipulation of the of the **ThumbnailSizeArgs** an **ThumbnailSizeType** parameters leads to Remote Code Execution vulnerability. Using CWE to declare the problem leads to CWE-502. Impacted is Integrity and Availability. An attacker might be able execute arbitrary code within the application context, and use them to achive remote code execution within the underlying hosting server.
 
-The weakness was presented 04/19/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-XXXX. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
+The weakness was presented 04/19/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-12471. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
 
 ## Proof-of-Concept
 

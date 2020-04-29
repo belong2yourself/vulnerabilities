@@ -4,7 +4,7 @@
 
 A vulnerability has been found in the Subrion CMS 4.2.1. It has been rated as problematic. Affected by this issue is an unknown code. The manipulation of the of a phrase value within a language leads to a CSV Injection vulnerability. Using CWE to declare the problem leads to CWE-1236. Impacted is confidentiality. An attacker might be able inject script and macros inside CSVs, and using them to mount further attacks against other users.
 
-The weakness was presented 04/12/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-XXXX. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known but no exploit is publicly available.
+The weakness was presented 04/12/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-12468. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known but no exploit is publicly available.
 
 ## Proof-of-Concept
 

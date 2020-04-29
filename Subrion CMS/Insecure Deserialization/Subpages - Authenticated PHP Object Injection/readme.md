@@ -4,7 +4,7 @@
 
 A vulnerability has been found in the Subrion CMS 4.2.1. It has been rated as problematic. Affected by this issue is the file `/admin/blocks.php`. The manipulation of the of the **subpages** value within a block leads to a PHP Object Injection vulnerability. Using CWE to declare the problem leads to CWE-502. Impacted is Integrity and Availability. An attacker might be able inject arbitrary PHP objects within the application context, and use them to achive arbitrary file deletion.
 
-The weakness was presented 04/14/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-XXXX. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
+The weakness was presented 04/14/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). The advisory is shared for download at github.com. This vulnerability is handled as CVE-2020-12469. The attack may be launched remotely. A single form of authentication is required for exploitation. Technical details are known and an exploit is publicly available.
 
 ## Proof-of-Concept
 
