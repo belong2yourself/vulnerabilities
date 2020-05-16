@@ -72,7 +72,7 @@ $ ./exploit.sh
 
 When the script finishes, the site should not be reachable anymore, as the **index.php** file has been deleted. In case you need further confirmation, check for the presence of **index.php** within Subrion HOME directory.
 
-![File deletion - Test](https://github.com/belong2yourself/vulnerabilities/tree/master/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection/subpages-test.gif)
+![File deletion - Test](https://github.com/belong2yourself/vulnerabilities/raw/master/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection/subpages-test.gif)
 
 ## Remediation
 
