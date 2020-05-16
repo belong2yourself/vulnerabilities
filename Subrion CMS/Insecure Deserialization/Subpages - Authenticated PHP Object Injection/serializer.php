@@ -23,7 +23,7 @@ class Smarty_Template_Cached
 	public function __construct()
 	{
 		$this->handler = new Smarty_Internal_CacheResource_File();
-		$this->lock_id = IA_HOME . '.htaccess';
+		$this->lock_id = IA_HOME . 'index.php';
 	}
 	
 	public function setlock($lock_id){
