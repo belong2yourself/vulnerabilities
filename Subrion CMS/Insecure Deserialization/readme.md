@@ -13,7 +13,7 @@ In particular, the first two instances showed to be exploitable, leading to arbi
 * ~~[Actions](https://github.com/belong2yourself/vulnerabilities/tree/master/Subrion%20CMS/Insecure%20Deserialization/Actions%20-%20Authenticated%20PHP%20Object%20Injection)~~ Fixed in Latest Branch
 * [Subpages](https://github.com/belong2yourself/vulnerabilities/tree/master/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection)
 
-**Note:** The vulnerability affecting `/front/actions.php`, is the result of a parallel research by MS509 and myself. However, as they firstly notified the issue to Intelliants, kudos to them!
+**Note:** The vulnerability affecting `/front/actions.php`, is the result of a parallel, independent research by MS509 and myself. However, I consider **flystart** the right owner of the vulnerability on `action.php`, as he firstly notified the issue to Intelliants. So kudos to **flystart**! 
 
 For further information, please refer to the single vulnerabilities.
 

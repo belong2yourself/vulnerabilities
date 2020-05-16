@@ -1,6 +1,6 @@
 # Actions - PHP Object Injection
 
-This vulnerability was found almost contemporaneously by both me and MS509 Team. As the first public appearance of this issue was made by them on the github page of Subrion, the author of this post is not taking credit for this finding. The aim of this report was to provide a slightly different exploitation method and a public, working exploit.
+This vulnerability was found almost contemporaneously by both me and MS509 Team. As the first public appearance of this issue was made by them on the github page of Subrion, the author of this post is not taking credit for this finding. The aim of this report was to only to provide a public, working exploit.
 
 ## VulDB-Like Summary
 
@@ -79,6 +79,14 @@ When the script finishes, the site should not be reachable anymore, as the .htac
 ## Remediation
 
 It seems the vulnerability is not exploitable on the latest branch. Updating to the latest version should solve the issue.
+
+## Credits
+
+As already written above, the vulnerability was formerly found by **flystart** (github: **ggg4566**). All credit to him for the discovery of this vulnerability.
+
+* [Flystart](https://github.com/ggg4566)
+
+For more information about the vulnerability, and a detailed write-up, check the MS509 link in the references, below.
 
 ## References
 
