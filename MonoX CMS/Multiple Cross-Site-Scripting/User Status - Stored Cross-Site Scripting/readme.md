@@ -10,7 +10,7 @@ In the context of this vulnerability, a logged in attacker may execute active co
 
 A vulnerability has been found in MonoX CMS for .NET up to v5.1.40.5152. It has been declared as problematic. Affected by this vulnerability is an unknown part of the files `MonoX.MonoSoftware.MonoX.ModuleGallery.UserProfileHeader` and `MonoX.MonoSoftware.MonoX.ModuleGallery.UserProfileModule`. The manipulation of the parameter **ctl00$ctl00$ctl01$ctl00$cp$cp$cp$cp$profileHeader$txtMyStatus** with the input value `<audio+src+onloadstart=alert(1)>` leads to a cross site scripting vulnerability. The CWE definition for the vulnerability is CWE-79. As an impact it is known to affect integrity. An attacker might be able to inject arbitrary html and script code into the web site. This would alter the appearance and would make it possible to initiate further attacks against site visitors.
 
-The weakness was disclosed 04/21/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). It is possible to read the advisory at github.com. This vulnerability is known as CVE-2020-XXXX. The attack can be launched remotely. The exploitation doesn't need any form of authentication. Technical details of the vulnerability are known, but there is no available exploit.
+The weakness was disclosed 04/21/2020 by Alessandro Magnosi (deadc0de) (GitHub Repository). It is possible to read the advisory at github.com. This vulnerability is known as CVE-2020-12472. The attack can be launched remotely. The exploitation doesn't need any form of authentication. Technical details of the vulnerability are known, but there is no available exploit.
 
 ## Proof-of-Concept
 
