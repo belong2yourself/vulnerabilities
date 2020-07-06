@@ -4,7 +4,7 @@ According to its website, [MonoX CMS](https://azuremarketplace.microsoft.com/it-
 
 During an independent assessment of version 5.1.40.5148, multiple vulnerabilities were found to affect this product.
 
-* [Multiple Cross-Site-Scripting](./Multiple%20Cross-Site-Scripting/readme.md)
-* [Privilege Escalation via ConvertVideo](./Privilege%20Escalation%20via%20ConvertVideo/readme.md)
-* [Privilege Escalation via Template Modification](./Privilege%20Escalation%20via%20Template%20Modification/readme.md)
-* [Remote Code Execution via Insecure Deserialization](./Remote%20Code%20Execution%20via%20Insecure%20Deserialization/readme.md)
+* [Multiple Cross-Site-Scripting](./Multiple%20Cross-Site-Scripting/)
+* [Privilege Escalation via ConvertVideo](./Privilege%20Escalation%20via%20ConvertVideo/)
+* [Privilege Escalation via Template Modification](./Privilege%20Escalation%20via%20Template%20Modification/)
+* [Remote Code Execution via Insecure Deserialization](./Remote%20Code%20Execution%20via%20Insecure%20Deserialization/)

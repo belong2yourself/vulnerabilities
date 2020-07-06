@@ -4,5 +4,5 @@ According to its website, [Sitemagic CMS](https://sitemagic.org/) is a Content M
 
 During an independent assessment of version 4.4.1, multiple vulnerabilities were found to affect this product.
 
-* [Arbitrary Password Change via Stack-Based Memory Corruption](./Arbitrary%20Password%20Change%20via%20Stack-Based%20Memory%20Corruption/readme.md)
-* [Privilege Escalation via Stack-Based Memory Corruption](./Privilege%20Escalation%20via%20Stack-Based%20Memory%20Corruption/readme.md)
+* [Arbitrary Password Change via Stack-Based Memory Corruption](./Arbitrary%20Password%20Change%20via%20Stack-Based%20Memory%20Corruption/)
+* [Privilege Escalation via Stack-Based Memory Corruption](./Privilege%20Escalation%20via%20Stack-Based%20Memory%20Corruption/)

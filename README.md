@@ -6,13 +6,13 @@ For the reader: Please be aware that not all of them are registered CVEs. Some o
 
 CVE assigned vulnerabilities:
 
-* [MonoX CMS](./Mono%20CMS/readme.md)
-* [NopCommerce](./NopCommerce/readme.md)
-* [ProVide FTP Server](./ProVide/readme.md)
-* [Sitemagic CMS](./SitemagicCMS/readme.md)
-* [Subrion CMS](./Subrion%20CMS/readme.md)
+* [MonoX CMS](./MonoX%20CMS/)
+* [NopCommerce](./NopCommerce/)
+* [ProVide FTP Server](./ProVide/)
+* [Sitemagic CMS](./SitemagicCMS/)
+* [Subrion CMS](./Subrion%20CMS/)
 
 Non CVE assigned vulnerabilities:
 
-* [Foscam](./Foscam/readme.md)
-* [Sricam](./Sricam/readme.md)
+* [Foscam](./Foscam/)
+* [Sricam](./Sricam/)

@@ -4,4 +4,4 @@ According to its website, [Sitemagic CMS](https://sitemagic.org/) is a Content M
 
 During an independent assessment of version 4.4.1, multiple vulnerabilities were found to affect this product.
 
-* [Cross-Site-Request-Forgery](./Foscam UID Denial-of-Service/readme.md)
+* [Cross-Site-Request-Forgery](./Foscam UID Denial-of-Service/)
