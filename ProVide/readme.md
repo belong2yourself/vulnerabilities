@@ -1,4 +1,4 @@
-# nopCOMMERCE Shopping CMS
+# ProVide FTP Server for Windows
 
 According to its website, [ProVide](https://www.provideserver.com/technical-details/) a high performance MFT (managed file transfer) server for Windows (32-bit and 64-bit) with superb remote administration that fully integrates all relevant file transfer protocols; FTP, FTPS, SFTP, TFTP and HTTPS (secure web access).
 
