@@ -27,6 +27,6 @@ No official fix is available for this issue.
 
 ## References
 
-*  https://www.owasp.org/index.php/Unrestricted_File_Upload
-*  https://www.acunetix.com/websitesecurity/introduction-web-shells/
-*  https://codedharma.com/posts/dotnet-core-webshell/
+*  [https://www.owasp.org/index.php/Unrestricted_File_Upload](https://www.owasp.org/index.php/Unrestricted_File_Upload)
+*  [https://www.acunetix.com/websitesecurity/introduction-web-shells/](https://www.acunetix.com/websitesecurity/introduction-web-shells/)
+*  [https://codedharma.com/posts/dotnet-core-webshell/](https://codedharma.com/posts/dotnet-core-webshell/)

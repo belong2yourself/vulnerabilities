@@ -1,4 +1,4 @@
-# nopCOMMERCE Shopping CMS
+# Subrion CMS
 
 According to its website, [Subrion CMS](https://subrion.org/) is a PHP/MySQL based CMS & framework that allows you to build websites for any purpose. Yes, from blog to corporate mega portal.
 
