@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f86b11b-1b7b-4c97-9cfd-689e428c3da2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foscam/Foscam UID Denial-of-Service/foscam-vms-uid-dos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Foscam/Foscam UID Denial-of-Service/foscam-vms-uid-dos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foscam/Foscam UID Denial-of-Service/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Foscam/Foscam UID Denial-of-Service/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foscam/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Foscam/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/Blog Comments - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/Blog Comments - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/Blog Description - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/Blog Description - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/User Status - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/User Status - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Multiple Cross-Site-Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via ConvertVideo/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via ConvertVideo/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via Template Modification/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via Template Modification/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via Template Modification/template.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Privilege Escalation via Template Modification/template.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/exploit.py" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/exploit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/test.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/HTML5Upload - Remote Code Execution via Insecure Deserialization/test.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/Photogallery - Remote Code Execution via Insecure Deserialization/exploit.py" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/Photogallery - Remote Code Execution via Insecure Deserialization/exploit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/Photogallery - Remote Code Execution via Insecure Deserialization/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/Photogallery - Remote Code Execution via Insecure Deserialization/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/Remote Code Execution via Insecure Deserialization/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoX CMS/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/MonoX CMS/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Cross-Site-Request-Forgery/csrf-poc.html" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Cross-Site-Request-Forgery/csrf-poc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Cross-Site-Request-Forgery/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Cross-Site-Request-Forgery/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Cross-Site-Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Cross-Site-Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Path Traversal/privesc-pat-trav.py" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Path Traversal/privesc-pat-trav.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Path Traversal/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Path Traversal/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook.zip" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Content/Images/facebook_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Content/Images/facebook_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Content/facebookstyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Content/facebookstyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/Configure2.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/Configure2.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/PublicInfo.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/PublicInfo.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/nc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/ExternalAuth.Facebook/nc.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/nc.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/nc.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/nc.hex" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/nc.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/plugin-privesc.py" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/plugin-privesc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Privilege Escalation via Plugin Upload/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/Vulnerable Application/nopCommerce_4.20_NoSource_SelfContained.rar" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/Vulnerable Application/nopCommerce_4.20_NoSource_SelfContained.rar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NopCommerce/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/NopCommerce/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/ProVide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/ProVide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/rSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/rSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Local Privilege Escalation via Unquoted Service Path/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Local Privilege Escalation via Unquoted Service Path/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Sandbox Escape via Symlink or Junction/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Sandbox Escape via Symlink or Junction/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Authenticated Arbitrary File Overwrite/path_traversal.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Authenticated Arbitrary File Overwrite/path_traversal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Authenticated Arbitrary File Overwrite/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Authenticated Arbitrary File Overwrite/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Cross-Site-Request-Forgery/csrf-poc.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Cross-Site-Request-Forgery/csrf-poc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Cross-Site-Request-Forgery/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Cross-Site-Request-Forgery/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/GetInheritedProperties - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/GetInheritedProperties - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/GetUserInfo - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/GetUserInfo - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/SetUserInfo - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/SetUserInfo - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Multiple Cross-Site-Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/poc.mkv" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/poc.mkv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/privesc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/privesc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web Admin Interface - Privilege Escalation via EXECUTE()/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Cross-Site Request Forgery/csrf-poc.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Cross-Site Request Forgery/csrf-poc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Cross-Site Request Forgery/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Cross-Site Request Forgery/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - HTTP Response Splitting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - HTTP Response Splitting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Collaborate - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Collaborate - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Collaborate - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Collaborate - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Deletemultiple - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Deletemultiple - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Share - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Share - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Share - Stored Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Share - Stored Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Waitedit - Reflected Cross-Site Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/Waitedit - Reflected Cross-Site Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/Web User Interface - Multiple Cross-Site-Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProVide/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ProVide/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Request-Forgery/csrf-poc.html" beforeDir="false" afterPath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Request-Forgery/csrf-poc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Request-Forgery/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Request-Forgery/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Scripting/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/SitemagicCMS/Cross-Site-Scripting/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SitemagicCMS/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/SitemagicCMS/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sricam/Arbitrary Password Change via Stack-Based Memory Corruption/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sricam/Arbitrary Password Change via Stack-Based Memory Corruption/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sricam/Arbitrary Password Change via Stack-Based Memory Corruption/sricam-change-password.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sricam/Arbitrary Password Change via Stack-Based Memory Corruption/sricam-change-password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sricam/Privilege Escalation via Stack-Based Memory Corruption/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sricam/Privilege Escalation via Stack-Based Memory Corruption/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sricam/Privilege Escalation via Stack-Based Memory Corruption/sricam-adduser-bo-local.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sricam/Privilege Escalation via Stack-Based Memory Corruption/sricam-adduser-bo-local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sricam/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sricam/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/CSV Injection/csv_injection.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/CSV Injection/csv_injection.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/CSV Injection/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/CSV Injection/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/exploit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/exploit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/serializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Actions - Authenticated PHP Object Injection/serializer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/exploit.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/exploit.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/subpages-test.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/Subpages - Authenticated PHP Object Injection/subpages-test.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Insecure Deserialization/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Session Fixation/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Session Fixation/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/Session Fixation/sess_fix.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/Session Fixation/sess_fix.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subrion CMS/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Subrion CMS/readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eIsoCMyWZGG6HBNh2Lr7BvfLG4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Foscam" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Sricam\Arbitrary Password Change via Stack-Based Memory Corruption" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Sricam\Privilege Escalation via Stack-Based Memory Corruption" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Foscam\Foscam UID Denial-of-Service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Foscam" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Sricam" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\Subrion CMS" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\SitemagicCMS" />
+      <recent name="C:\Users\d3adc0de\Desktop\Shared\PenetrationTesting\Git Personal Projects\vulnerabilities\ProVide" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f86b11b-1b7b-4c97-9cfd-689e428c3da2" name="Default Changelist" comment="" />
+      <created>1594020613505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594020613505</updated>
+    </task>
+    <servers />
+  </component>
+</project>

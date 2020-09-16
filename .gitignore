@@ -1,6 +1,11 @@
-Reports/*
-*.docx
+*.gem
+.bundle
+.ruby-version
+.jekyll-cache
+.sass-cache
+_site
+Gemfile.lock
+node_modules
+*.html
 *.pdf
-.idea
-**/ignore
-**/readme.html
+*.docx
