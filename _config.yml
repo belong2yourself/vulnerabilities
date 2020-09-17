@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Advisories
 description: Collection of advisories presented with a good jeckyll theme
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/vulnerabilities" # the subpath of your site, e.g. /blog
 url: "https://belong2yourself.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
