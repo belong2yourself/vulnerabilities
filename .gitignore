@@ -9,3 +9,4 @@ node_modules
 readme.html
 *.pdf
 *.docx
+.idea/

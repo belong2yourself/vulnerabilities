@@ -20,7 +20,7 @@ The weakness was disclosed 05/06/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Proof-of-Concept
 
-The `overwrite.py` script has been provided to reproduce the issue. If used on a fresh installation of the product, which means: 
+The [overwrite.py](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/ProVide/Web%20Admin%20Interface%20-%20Authenticated%20Arbitrary%20File%20Overwrite/path_traversal.py) script has been provided to reproduce the issue. If used on a fresh installation of the product, which means: 
 
 * no users exists (except for 1 admin) 
 * no direct filesystem access is granted to anyone, not even to admin
