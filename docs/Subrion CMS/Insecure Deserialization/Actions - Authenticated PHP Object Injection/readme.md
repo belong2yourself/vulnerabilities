@@ -18,7 +18,7 @@ The weakness was originally presented by **flystart** of Mission Studio Team [MS
 
 ## Proof-of-Concept
 
-The following script may be used to easily verify the vulnerability:
+The following [script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/Insecure%20Deserialization/Actions%20-%20Authenticated%20PHP%20Object%20Injection/exploit.sh), with its [serializer](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/Insecure%20Deserialization/Actions%20-%20Authenticated%20PHP%20Object%20Injection/serializer.php) may be used to easily verify the vulnerability:
 
 ```bash
 #!/bin/bash

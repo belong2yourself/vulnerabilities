@@ -15,6 +15,8 @@ Affected are all the functionalities of the file Libraries/Nop.Services/Media/Ro
 
 The weakness was discovered during June 2019 by Alessandro Magnosi and Jun Woo Lee and it is uniquely identified as CVE-2019-19684. The exploitability is told to be non-trivial. It is possible to launch the attack remotely. A single authentication is necessary for exploitation. Technical details are known, and a public exploit has been developed by Alessandro Magnosi and released to the public.
 
+The weaponized version of the exploit permits to upload a Web Shell overwriting a default file of the CMS. 
+
 ## Proof-of-Concept
 
 During the review, it was possible for an administrator user to exploit the RoxyFileman file upload functionality to read and write arbitrary files on the server. This behavior could be exploited to modify critical application server files, achieving code execution on the machine. 
@@ -31,6 +33,8 @@ To reproduce the issue, the following steps can be used:
 *	Login in the application as an administrator
 *	Navigate to the first link
 *	The file passwd will be downloaded as a regular file
+
+To ease the exploitation, an [exploit script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/NopCommerce/Privilege%20Escalation%20via%20Path%20Traversal/privesc-pat-trav.py) has been provided, which can be used against a vulnerable version of the CMS to upload a Web Shell, overwrite the "Contact Us" page. The uploaded Web Shell is a specially crafted .NET MVC Shell, using Razor syntax.
 
 ## Remediation
 

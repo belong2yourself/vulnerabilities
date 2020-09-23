@@ -16,7 +16,7 @@ The weakness was presented 04/14/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Proof-of-Concept
 
-The following script may be used to easily verify the vulnerability:
+The following [script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection/exploit.sh), with its [serializer](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/Insecure%20Deserialization/Subpages%20-%20Authenticated%20PHP%20Object%20Injection/serializer.php), may be used to easily verify the vulnerability:
 
 ```bash
 #!/bin/bash

@@ -20,7 +20,7 @@ The weakness was presented 04/12/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 Submitting a valid login with a crafted session ID, causes the ID to be reflected and set as a valid session identifier.
 
-The following script may be used to easily verify the vulnerability:
+The following [script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/Session%20Fixation/sess_fix.sh) may be used to easily verify the vulnerability:
 
 ```bash
 #!/bin/bash

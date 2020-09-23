@@ -23,7 +23,7 @@ The issue was previously mitigated implementing the same-site cookie protection,
 
 ## Proof-of-Concept
 
-The following PoC can be used to create a file under C:\Users\Public\Document [Replace depending on installation type]. 
+A [proof-of-concept](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/NopCommerce/Cross-Site-Request-Forgery/csrf-poc.html) has been released, and can be used to create a file under C:\Users\Public\Document [Replace depending on installation type]. 
 
 **Steps to reproduce:**
 
@@ -109,9 +109,8 @@ Upgrading to version 4.3.0 solves the issue.
 
 ## References
 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF) 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet 
-*	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9042 
+*	[https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf) 
+*	[https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9042](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9042) 
 
 
 

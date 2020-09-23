@@ -28,6 +28,5 @@ Upgrading to version 4.4.2 eliminates this vulnerability.
 
 ## References
 
-* https://www.owasp.org/index.php/Cross-site_Scripting_(XSS) 
-* https://www.google.com/intl/en/about/appsecurity/learning/xss/ 
-* https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet 
+* [https://owasp.org/www-community/attacks/xss/](https://owasp.org/www-community/attacks/xss/)
+* [https://www.google.com/intl/en/about/appsecurity/learning/xss/](https://www.google.com/intl/en/about/appsecurity/learning/xss/) 

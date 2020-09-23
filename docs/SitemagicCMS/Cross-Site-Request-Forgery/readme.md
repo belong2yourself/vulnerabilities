@@ -19,7 +19,7 @@ The following PoC can be used to create a file under C:\Users\Public\Document [R
 
 **Steps to reproduce:**
 
-The following PoC code can be used to create a web shell on the root directory of the server. 
+A [proof-of-concept](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/SitemagicCMS/Cross-Site-Request-Forgery/csrf-poc.html) code has been provided, and can be used to create a web shell on the root directory of the server. 
 
 Steps to reproduce:
 
@@ -39,9 +39,7 @@ Upgrading to version 4.4.2 eliminates this vulnerability.
 
 ## References
 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF) 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet 
-*	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9042 
+*	[https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf) 
 
 
 

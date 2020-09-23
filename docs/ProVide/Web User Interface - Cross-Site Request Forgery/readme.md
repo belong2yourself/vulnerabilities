@@ -39,8 +39,7 @@ Currently, no fixes are available for this issue.
 
 ## References
 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF) 
-*	https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet 
+*	[https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf) 
 
 
 

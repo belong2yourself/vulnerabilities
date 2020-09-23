@@ -30,7 +30,19 @@ root@kali:~# python3 privesc_exec.py -t 192.168.226.140 -u Admin -p Passw0rd! -H
 [+] Check your shell
 ```
 
-A video is available as well, to easily understand what the impact could be.
+A video is available as well, to easily understand what the impact could be:
+
+<div class="embed-container">
+  <iframe
+      style="display: block;margin-left: auto;margin-right: auto;"
+      width="800"
+      height="600"
+      src="https://drive.google.com/file/d/1lLESY_6B_u39TTjvmJTmS7_JspPBws1D/preview"
+      frameborder="0"
+      allow="autoplay"
+      allowfullscreen="">
+  </iframe>
+</div>
 
 ## Remediation
 

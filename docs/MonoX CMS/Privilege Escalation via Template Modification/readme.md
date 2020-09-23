@@ -23,7 +23,7 @@ To reproduce the vulnerability the below steps should be followed:
 * Navigate to Admin Area->Pages 
 * Right Click to a page (e.g. Blog.aspx)
 * From the drop-down menu, choose manage templates
-* Upload the PoC template (i.e template.aspx), choose it as the template for the page and save
+* Upload the PoC template (i.e [template.aspx](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/MonoX%20CMS/Privilege%20Escalation%20via%20Template%20Modification/template.aspx)), choose it as the template for the page and save
 * Navigate to http://monox.local/Blog.aspx
 * See the webshell
 

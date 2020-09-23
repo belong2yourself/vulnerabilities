@@ -15,7 +15,7 @@ The weakness was presented 04/19/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Proof-of-Concept
 
-An exploit script is provided in this repository, which may be used to easily verify and exploit the vulnerability.
+An exploit [script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/MonoX%20CMS/Remote%20Code%20Execution%20via%20Insecure%20Deserialization/HTML5Upload%20-%20Remote%20Code%20Execution%20via%20Insecure%20Deserialization/exploit.py) is provided in this repository, which may be used to easily verify and exploit the vulnerability.
 
 The script should give the following output, proving the vulnerability.
 

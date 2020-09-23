@@ -7,6 +7,10 @@ title: CVE-2019-19684 - Privilege Escalation via unprotected Plugin Upload
 
 # Privilege Escalation via unprotected Plugin Upload
 
+## Overview
+
+As the majority of CMS Frameworks, NopCommerce is affected "by-design" by the vulnerability affecting the plugin system, which allows a web application admin to upload arbitrary dynamic content on the server, in the form of a Plugin. This vulnerability can be hence used to achieve code execution on the underlying operating system, usually using an ad-hoc crafted web shell as the mean.
+
 ## Summary
 
 It was identified that NopCommerce v4.2.0 was affected by a privilege escalation via file upload as it fails to adequately analyse uploaded files. This can allow the upload of malicious files, such as malware, web-shells or other executable code. An attacker who uploads files of this nature can compromise the underlying application server.
@@ -26,7 +30,7 @@ To reproduce the vulnerability the below steps should be followed:
 * Navigate to the path: /Admin/FacebookAuthentication/Configure?token=76a4bfb031f9cb97fd4a739cbc3400b65397cf34&cmd=
 * Put any command to test the web shell
 
-For ease to use, a proof-of-concept script has been provided, that could open a reverse tcp connection between the NopCommerce server and the attacker machine, giving to the attacker shell access to the server.
+For ease to use, a [proof-of-concept script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/NopCommerce/Privilege%20Escalation%20via%20Plugin%20Upload/plugin-privesc.py) has been provided, that could open a reverse tcp connection between the NopCommerce server and the attacker machine, giving to the attacker shell access to the server.
 Note that the vulnerability has been tested thoroughly on different IIS versions and on the docker appliance. In some cases, the antivirus would get rid of one executable contained in the crafted plugin; in these cases, the attacker would still have web shell access, but obtaining interactive shell access would require additional effort.
 
 For further information, please see the proof of concept script.
@@ -37,6 +41,6 @@ As the plugin system allows developers to implement their plugins by design, the
 
 ## References
 
-*  https://www.owasp.org/index.php/Unrestricted_File_Upload
-*  https://www.acunetix.com/websitesecurity/introduction-web-shells/
-*  https://codedharma.com/posts/dotnet-core-webshell/
+*  [https://www.owasp.org/index.php/Unrestricted_File_Upload](https://www.owasp.org/index.php/Unrestricted_File_Upload)
+*  [https://www.acunetix.com/websitesecurity/introduction-web-shells/](https://www.acunetix.com/websitesecurity/introduction-web-shells/)
+*  [https://codedharma.com/posts/dotnet-core-webshell/](https://codedharma.com/posts/dotnet-core-webshell/)

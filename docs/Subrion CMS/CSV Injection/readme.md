@@ -14,7 +14,7 @@ The weakness was presented 04/12/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Proof-of-Concept
 
-The following script may be used to easily verify the vulnerability:
+The following [script](https://github.com/belong2yourself/vulnerabilities/blob/master/docs/Subrion%20CMS/CSV%20Injection/csv_injection.sh) may be used to easily verify the vulnerability:
 
 ```bash
 #!/bin/bash
