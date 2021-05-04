@@ -51,7 +51,7 @@ sftp>
 
 ## Remediation
 
-No official fix currently exists for this vulnerability.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

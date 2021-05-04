@@ -48,7 +48,7 @@ url=https%3A%2F%2Fprovide.ftp.local%2Fn8nTTXWuZgi9gDyy%2F4Z93Q76H%2Ftestfiletxt
 
 ## Remediation
 
-No official fix is available for this issue.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

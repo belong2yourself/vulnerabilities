@@ -46,7 +46,7 @@ A video is available as well, to easily understand what the impact could be:
 
 ## Remediation
 
-Currently, no official fix is available for this issue.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

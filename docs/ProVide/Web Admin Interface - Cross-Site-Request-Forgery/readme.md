@@ -38,11 +38,8 @@ As a proof-of-concept, an HTML/Javascript PoC was created, that can be used to c
 
 ## Remediation
 
-Currently, no fixes are available for this issue.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 
 *	[https://owasp.org/www-community/attacks/csrf](https://owasp.org/www-community/attacks/csrf) 
-
-
- 

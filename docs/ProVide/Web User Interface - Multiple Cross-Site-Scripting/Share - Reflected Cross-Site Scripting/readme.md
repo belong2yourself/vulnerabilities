@@ -30,7 +30,7 @@ The weakness was disclosed 04/06/2020 by Alessandro Magnosi (deadc0de) (GitHub R
 
 ## Remediation
 
-No official fix is available for this issue.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

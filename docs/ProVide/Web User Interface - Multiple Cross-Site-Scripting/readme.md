@@ -19,7 +19,7 @@ For further details, refer to the single vulnerabilities.
 
 ## Remediation
 
-No official fix has been released to mitigate this vulnerability.
+Update the software to v14.0 or higher solves the issue.
 
 ## References
 

@@ -37,7 +37,7 @@ root@kali:~# python3 overwrite.py -t 192.168.226.140 -u Admin -p Passw0rd!
 
 ## Remediation
 
-Currently, no official fix is available for this issue.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

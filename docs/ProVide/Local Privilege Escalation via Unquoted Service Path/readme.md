@@ -39,7 +39,7 @@ ProVide.exe                   5604 Services                   0     20,252 K Unk
 
 ## Remediation
 
-There is no fix to this vulnerability at the moment.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 

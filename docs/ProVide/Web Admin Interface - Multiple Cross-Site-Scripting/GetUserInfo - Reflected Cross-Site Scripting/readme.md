@@ -46,7 +46,7 @@ Cookie: ProVideAdminSessionID=6FVPFDvS2vGCaWX
 
 ## Remediation
 
-No official fix has been released to mitigate this vulnerability.
+Updating the software to v14.0 or higher should solve the issue.
 
 ## References
 
