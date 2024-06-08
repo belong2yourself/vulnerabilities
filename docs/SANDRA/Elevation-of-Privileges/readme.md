@@ -25,7 +25,7 @@ process token ([Ruben Boonen][5] - IBM X-Force), egregiously explained by [h0mbr
 
 Affected by the vulnerability was the 0x22a428 IOCTL code. 
 
-The weakness was discovered during February 2024.
+The weakness was discovered during February 2024, and was assigned CVE-2024-34332.
 
 ## Vulnerable code
 
