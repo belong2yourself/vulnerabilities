@@ -1,6 +1,6 @@
 ---
 layout: default
-title: FinalWire - AIDA64
+title: AIDA
 nav_order: 11
 has_children: true
 ---
