@@ -8,7 +8,7 @@ title: SANDRA Elevation-of-Privileges
 
 ## Summary
 
-The AIDA Kernel Driver does not validate data received from the IRP->SystemBuffer.
+The SANDRA Kernel Driver does not validate data received from the IRP->SystemBuffer.
 
 Some IOCTL codes implement a logic where parameters arriving from the SystemBuffer 
 are directly passed without validation to a routine that:
