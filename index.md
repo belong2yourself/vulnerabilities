@@ -10,6 +10,32 @@ permalink: /
 
 This is a collection of publicly disclosed vulnerabilities and advisories, which can be uniquely identified by a CVE or not. 
 
+## WhoAmI
+
+I'm Alessandro Magnosi (aka klezvirus), you can contact me via GitHub or Twitter (both klezvirus).
+
+For encrypted communications, this is my PGP Public Key.
+
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User-ID:	Alessandro Magnosi <alessandro.magnosi@bsigroup.com>
+Comment: Fingerprint:	B03EC04ECEE1ABC528C96A87E0439C2158C22072
+
+
+mDMEY1bVHxYJKwYBBAHaRw8BAQdAY9443HAaP0uRpIPSpBXhUlOTwnNhDJG7KUk3
+6YyLODi0NEFsZXNzYW5kcm8gTWFnbm9zaSA8YWxlc3NhbmRyby5tYWdub3NpQGJz
+aWdyb3VwLmNvbT6IlgQTFggAPhYhBLA+wE7O4avFKMlqh+BDnCFYwiByBQJjVtUf
+AhsjBQkPZY4hBQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJEOBDnCFYwiByBeUB
+AKQbTt3P9kNo2OaDVJ634Ivl2k3X/nyVzUgAs5mbY32oAQDTxoCUv2zOnIUblcJg
+jI9zlmvMnkvMBDUc8zHJlUzIDbg4BGNW1R8SCisGAQQBl1UBBQEBB0BqIM0+xliA
+MZw1pj3U8eZT9UtV6DVb4yVg6s4BGbtBLgMBCAeIfgQYFggAJhYhBLA+wE7O4avF
+KMlqh+BDnCFYwiByBQJjVtUfAhsMBQkPZY4hAAoJEOBDnCFYwiBy+DoBANjwR+Go
+ZfR34CVU5RgDv/jsGvop7b8G1Eu4bGFrpsONAQCjVtTReh/EP9C2Y5THQBYAC4kA
+ibXyRJnJkHZi9Mn/Aw==
+=lu87
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
 ## Note for the reader
 
 Currently, this repository serves more as a pot for me to drop interesting issues, however, some of them are still just not interesting bugs. Some of them might not even be worth seeing. That said, read at your risk!

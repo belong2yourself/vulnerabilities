@@ -78,6 +78,7 @@ class Serializer{
 	
 	public static function serialize_object($type, $lock_id=null, $urlenc=false){
 		$object = new Smarty_Internal_Template();
+		$object->setlock("TESTESTETST");
 		if($lock_id){
 			$object->setlock($lock_id);
 		}
